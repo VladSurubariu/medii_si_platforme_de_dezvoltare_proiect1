@@ -1,0 +1,2 @@
+# medii_si_platforme_de_dezvoltare_proiect1
+University project regarding development platforms
