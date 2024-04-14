@@ -14,8 +14,9 @@ namespace rock_papers_scissors
     {
         Rock rock = new Rock();
         Paper paper = new Paper();
+        Option option = new Option();
         Scissors scissors = new Scissors();
-        Option option= new Option();
+        ComputerChoice computer = new ComputerChoice();
 
         public Form1()
         {
@@ -43,6 +44,33 @@ namespace rock_papers_scissors
             {
                 userPictureBox.Image = rock.GetPicture();
                 userPictureBox.Tag = rock.GetName();
+            }
+        }
+
+        private void choose_button_Click(object sender, EventArgs e)
+        {
+            if ((string)userPictureBox.Tag != option.GetName())
+            {
+                computerPictureBox.Image = computer.GetPicture();
+
+                Mediator mediator = new Mediator(userPictureBox.Tag.ToString(), computer.GetName());
+
+                int winner = mediator.DecideWinner();
+
+                computer.GenerateNewNumber();
+
+                if (winner == -1)
+                {
+                    MessageBox.Show("Congrats! You win!");
+                }
+                else if (winner == 1)
+                {
+                    MessageBox.Show("Ouf! You lost!");
+                }
+                else
+                {
+                    MessageBox.Show("Tie!");
+                }
             }
         }
     }
