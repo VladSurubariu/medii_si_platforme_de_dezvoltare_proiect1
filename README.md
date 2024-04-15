@@ -9,5 +9,6 @@
 - DecideWinnerTest_Draw
 
 ## Projects
-- Project 1 and it's refactoring is available on the master branch
+- Project 1 is available on the master branch
+- Project 1's refactoring is available on feature/refactoring
 - Project 2 is available only on feature/second-project-initial-commit branch
