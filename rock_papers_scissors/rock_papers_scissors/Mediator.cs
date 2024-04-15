@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace rock_papers_scissors
 {
-    internal class Mediator
+    public class Mediator
     {
         string user_choice;
         string computer_choice;

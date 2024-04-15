@@ -13,11 +13,13 @@ namespace rock_papers_scissors
         string[] choices = { "rock", "paper", "scissors" };
         Bitmap[] bitmaps = { Properties.Resources.fist, Properties.Resources.hand_paper, Properties.Resources.scissors };
 
+        /* Basic constructor */
         public ComputerChoice()
         {
             GenerateNewNumber();
         }
 
+        /* Function that generates a random number */
         public void GenerateNewNumber()
         {
             Random random = new Random();
@@ -25,11 +27,13 @@ namespace rock_papers_scissors
             ix = random.Next(choices.Length);
         }
 
+        /* Get choice */
         public string GetName()
         {
             return choices[ix];
         }
 
+        /* Get Picture */
         public Bitmap GetPicture()
         {
             return bitmaps[ix];
